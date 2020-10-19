@@ -101,7 +101,7 @@ function createRock(x) {
       function step() {
         rock.style.left = `${top + 2}px`;
       }
-      
+
       window.requestAnimationFrame(step);
     }
     /**
