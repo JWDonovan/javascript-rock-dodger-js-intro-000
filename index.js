@@ -80,6 +80,9 @@ function createRock(x) {
    */
   function moveRock() {
     // implement me!
+    let top = positionToInteger(rock.style.top);
+    rock.style.top = `${top + 2}px`;
+    
     // (use the comments below to guide you!)
     /**
      * If a rock collides with the DODGER,
@@ -93,10 +96,8 @@ function createRock(x) {
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
      */
-    let top = positionToInteger(rock.style.left);
-
     if (top < GAME_HEIGHT) {
-      rock.style.top = `${top + 2}px`;
+      moveRock();
     } else {
       ROCKS.unshift();
       rock.remove();
