@@ -111,7 +111,7 @@ function endGame() {
   clearInterval(gameInterval);
 
   ROCKS.forEach(rock => {
-    document.remove();
+    rock.remove();
   });
 }
 
