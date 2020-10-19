@@ -86,7 +86,6 @@ function createRock(x) {
      * we should call endGame().
      */
      if (checkCollision(rock)) {
-       window.requestAnimationFrame();
        endGame();
      }
 
@@ -106,18 +105,22 @@ function createRock(x) {
     //   window.requestAnimationFrame(step);
     // }
 
-    function step() {
-      let top = positionToInteger(rock.style.left);
-
-      if (top < GAME_HEIGHT) {
-        rock.style.left = `${top + 2}px`;
-      } else {
-        ROCKS.unshift();
-        rock.remove();
-      }
+    if (top < GAME_HEIGHT) {
+      rock.style.top = `${top + 2}px`;
     }
+    
 
-    window.requestAnimationFrame(step);
+    // function step() {
+    //   let top = positionToInteger(rock.style.left);
+    // 
+    //   if (top < GAME_HEIGHT) {
+    //     rock.style.left = `${top + 2}px`;
+    //   } else {
+    //     ROCKS.unshift();
+    //     rock.remove();
+    //   }
+    // }
+
     /**
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM.
