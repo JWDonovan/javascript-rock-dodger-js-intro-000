@@ -132,7 +132,7 @@ function endGame() {
 
   ROCKS.forEach(rock => {
     rock.remove();
-    ROCKS.unshift();
+    ROCKS.pop();
   });
 
   window.removeEventListener('keydown', moveDodger);
