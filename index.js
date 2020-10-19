@@ -168,10 +168,7 @@ function moveDodgerRight() {
   function step() {
     var rightNumbers = DODGER.style.right.replace('px', '');
     var right = parseInt(rightNumbers, 10);
-
-    if (right > 0) {
-      DODGER.style.right = `${right - 4}px`;
-    }
+    DODGER.style.right = `${right - 4}px`;
   }
 
   window.requestAnimationFrame(step);
