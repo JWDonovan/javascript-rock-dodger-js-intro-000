@@ -147,7 +147,7 @@ function moveDodgerLeft() {
     var leftNumbers = DODGER.style.left.replace('px', '');
     var left = parseInt(leftNumbers, 10);
     DODGER.style.left = `${left - 4}px`;
-    window.requestAnimationFrame(step)
+    window.requestAnimationFrame(step);
   }
 }
 
