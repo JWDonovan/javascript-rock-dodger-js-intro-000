@@ -108,11 +108,11 @@ function createRock(x) {
     if (top < GAME_HEIGHT) {
       rock.style.top = `${top + 2}px`;
     }
-    
+
 
     // function step() {
     //   let top = positionToInteger(rock.style.left);
-    // 
+    //
     //   if (top < GAME_HEIGHT) {
     //     rock.style.left = `${top + 2}px`;
     //   } else {
