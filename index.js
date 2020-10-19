@@ -92,8 +92,8 @@ function createRock(x) {
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
      */
-    let topNumbers = DODGER.style.top.replace('px', '');
-    let top = parseInt(topNumbers, 10);
+    //let topNumbers = DODGER.style.top.replace('px', '');
+    let top = positionToInteger(rock.style.left);
 
     if (top < GAME_HEIGHT) {
       rock.style.left = `${top + 2}px`;
