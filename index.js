@@ -108,6 +108,11 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
+  clearInterval(gameInterval);
+
+  ROCKS.forEach(rock => {
+    document.remove();
+  });
 }
 
 function moveDodger(e) {
@@ -135,6 +140,7 @@ function moveDodgerRight() {
    * This function should move DODGER to the right
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
+
 }
 
 /**
