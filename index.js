@@ -97,6 +97,12 @@ function createRock(x) {
 
     if (top < GAME_HEIGHT) {
       rock.style.left = `${top + 2}px`;
+
+      function step() {
+        rock.style.left = `${top + 2}px`;
+      }
+      
+      window.requestAnimationFrame(step);
     }
     /**
      * But if the rock *has* reached the bottom of the GAME,
