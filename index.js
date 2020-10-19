@@ -113,6 +113,9 @@ function endGame() {
   ROCKS.forEach(rock => {
     rock.remove();
   });
+  ROCKS = [];
+
+  alert('YOU LOSE!');
 }
 
 function moveDodger(e) {
