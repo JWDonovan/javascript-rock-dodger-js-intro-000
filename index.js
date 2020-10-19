@@ -115,6 +115,8 @@ function endGame() {
   });
   ROCKS = [];
 
+  
+
   alert('YOU LOSE!');
 }
 
