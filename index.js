@@ -95,40 +95,17 @@ function createRock(x) {
      */
     let top = positionToInteger(rock.style.left);
 
-    // if (top < GAME_HEIGHT) {
-    //   rock.style.left = `${top + 2}px`;
-    //
-    //   function step() {
-    //     rock.style.left = `${top + 2}px`;
-    //   }
-    //
-    //   window.requestAnimationFrame(step);
-    // }
-
     if (top < GAME_HEIGHT) {
       rock.style.top = `${top + 2}px`;
+    } else {
+      ROCKS.unshift();
+      rock.remove();
     }
-
-
-    // function step() {
-    //   let top = positionToInteger(rock.style.left);
-    //
-    //   if (top < GAME_HEIGHT) {
-    //     rock.style.left = `${top + 2}px`;
-    //   } else {
-    //     ROCKS.unshift();
-    //     rock.remove();
-    //   }
-    // }
 
     /**
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM.
      */
-    //  else {
-    //   ROCKS.unshift();
-    //   rock.remove();
-    //  }
   }
 
   // We should kick off the animation of the rock around here.
