@@ -91,7 +91,7 @@ function createRock(x) {
     let top = parseInt(topNumbers, 10);
 
     if (top < GAME_HEIGHT) {
-      rock.style.left = `${top + 2}px`
+      rock.style.left = `${top + 2}px`;
     }
     /**
      * But if the rock *has* reached the bottom of the GAME,
