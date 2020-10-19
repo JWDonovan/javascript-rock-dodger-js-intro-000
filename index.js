@@ -82,7 +82,7 @@ function createRock(x) {
     // implement me!
     let top = positionToInteger(rock.style.top);
     rock.style.top = `${top + 2}px`;
-    
+
     // (use the comments below to guide you!)
     /**
      * If a rock collides with the DODGER,
